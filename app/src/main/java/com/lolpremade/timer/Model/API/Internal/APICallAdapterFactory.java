@@ -14,7 +14,7 @@ import rx.Observable;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by cjk on 16/9/27.
+ * Created by sia on 17/5/9.
  */
 
 class APICallAdapterFactory extends CallAdapter.Factory {

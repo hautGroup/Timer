@@ -17,6 +17,9 @@ import android.view.MenuItem;
 import com.lolpremade.timer.Model.API.LoginApi;
 
 import rx.Observable;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,10 +50,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         LoginApi.y().subscribe(x -> {
-            Log.e("MainActivity", "Log" + x.toString());
-        }, e -> {
-            Log.e("MainActivity", "Log" + e.toString());
-        });
+                    Log.e("MainActivity", "Log" + x.toString());
+                }, e -> {
+                    Log.e("MainActivity", "Log" + e.toString());
+                });
     }
 
     @Override
